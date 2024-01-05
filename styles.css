@@ -145,23 +145,22 @@ button {
 
 .cards .card .image {
   color: #1f2937;
-  font-size: 32px;
+  font-size: 24px;
   font-weight: bold;
   display: flex;
   justify-content: center;
-  align-items: center
+  align-items: center;
+  width: 150px;
+  height: 150px;
+  border: #3882F6 solid 4px;;
+  border-radius: 15px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .cards .card {
   width: 150px;
   flex: 0 0 auto;
-}
-
-.cards .card .image {
-  width: 150px;
-  height: 150px;
-  border: #3882F6 solid 4px;;
-  border-radius: 15px;
 }
 
 .cards .card .text {
