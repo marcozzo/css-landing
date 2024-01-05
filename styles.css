@@ -1,8 +1,34 @@
+@font-face {
+  font-family: "Roboto";
+  src: local('Roboto-Regular.ttf');
+  src: url('fonts/Roboto-Regular.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: local('Roboto-LightItalic.ttf');
+  src: url('fonts/Roboto-LightItalic.ttf');
+  font-weight: 200;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: local('Roboto-Bold.ttf');
+  src: url('fonts/Roboto-Bold.ttf');
+  font-weight: bold;
+  font-style: normal;
+}
+
+
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Helvetica, sans-serif;
+  font-family: Roboto, Arial, sans-serif;
 }
 
 body {
@@ -43,6 +69,7 @@ body {
   color: #e5e7eb;
   text-decoration: none;
   margin-left: 20px;
+  font-weight: normal;
 }
 
 .header-content {
@@ -71,16 +98,19 @@ body {
 }
 
 .content > button {
+  border: none;
+  margin-top: 8px;
   flex: 0 0 20px;
-  width: 120px;
   padding: 8px 16px;
+}
+
+button {
+  width: 120px;
   font-weight: 700;
   font-size: 16px;
   background-color: #3882F6;
   color: #f9faf8;
-  border: none;
   border-radius: 5px;
-  margin-top: 8px;
 }
 
 
@@ -130,19 +160,81 @@ body {
 
 /*QUOTE*/
 
-.quote {
+.quote-box {
   width: 100%;
-  height: 325px;
+  height: 380px;
   background-color: #E5E7EB;
+  color: #1f2937;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.quote {
+  width: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding-top: 36px;
 }
 
 .quote .text {
   font-size: 36px;
-  color: #1f2937;
-  width: 50%;
   font-weight: 100;
-  font-style: italic;
+}
+
+.quote .author {
+  font-weight: bold;
+  font-size: 24px;
+  align-self: flex-end;
+}
+
+
+/*SIGNUP CARD*/
+
+.signup-offer {
+  height: 300px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.signup.card {
+  border-radius: 8px;
+  background-color: #3882F6;
+  width: 75%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  column-gap: 200px;
+}
+
+.signup.card.text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 0 0 auto;
+  width: fit-content;
+  color: #f9faf8;
+}
+
+.signup.heading {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.signup.card.button {
+  width: 150px;
+  height: 100%;
+}
+
+.signup.card button {
+  text-align: center;
+  height: auto;
+  padding: 6px 14px;
+  border: #f9faf8 solid 2px;
 }
